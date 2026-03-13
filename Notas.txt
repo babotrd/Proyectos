@@ -1,0 +1,13 @@
+Flujo diario a partir de ahora
+Cada vez que hagas cambios importantes:
+
+git status
+git add .
+git commit -m "Descripcion clara del cambio"
+git push
+
+Cuándo hacer commit (regla de oro)
+✔ Cuando algo funciona
+✔ Cuando terminas una opción
+✔ Antes de refactorizar
+✔ Antes de experimentar algo grande
