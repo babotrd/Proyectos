@@ -4,7 +4,7 @@
 # 4. opcion 3 Eliminar objetos de la lista
 # 5. opcion 4 Ordenar la lista
 
-def add_to_list():
+def add_to_list(lista):
     print("Para salir en cualquier momento favor de presionar el #9")
     while True:
 
@@ -15,21 +15,17 @@ def add_to_list():
 
         lista.append(user_input)
 
-def view_list():
+def view_list(lista):
         
-        while True:
-            if lista == []:
-                print("La lista esta vacia")
-                user_input = input("Escribe '9' para volver al menu: ").lower()
-                if user_input == "9":
-                    break
+    if lista == []:
+        print("La lista esta vacia")
+                    
 
-            else:
-                print("La lista es: ", lista)
-                break
+    else:
+        print("La lista es: ", lista)
+        
 
-def remove_from_list():
-    1
+def remove_from_list(lista):
 
     if lista == []:
         print("La lista esta vacia")
@@ -41,51 +37,57 @@ def remove_from_list():
         else:
             print("El valor no esta en la lista")
 
-def srted_list():
+def sorted_list(lista):
 
     if lista == []:
         print("No hay contenido en la lista \n")
 
     else:
-        srted = sorted(lista)
-        print(srted)
+        
+        lista.sort()
+        print("la lista ordenada es: ", lista)
 
+def main():
 
-lista = []
+    lista = []
 
 #Menu principal para el usuario
-while True:
+    while True:
     
-    print("Menu"
-    "\n 1. Añadir a la lista"
-    "\n 2. Ver lista"
-    "\n 3. Eliminar objetos"
-    "\n 4. Ordenar lista"
-    "\n 5. Salir" \
-    "\n")
+        print("Menu"
+        "\n 1. Añadir a la lista"
+        "\n 2. Ver lista"
+        "\n 3. Eliminar objetos"
+        "\n 4. Ordenar lista"
+        "\n 5. Salir"
+        "\n")
 
-    opcion = input("ingrese una opcion: ")
+        opcion = input("ingrese una opcion: ")
     
-    if opcion != "1" and opcion != "2" and opcion != "3" and opcion!= "4" and opcion!= "5":
-        print("Opción no válida. Por favor, selecciona una opción válida.\n")
+        if opcion != "1" and opcion != "2" and opcion != "3" and opcion!= "4" and opcion!= "5":
+            print("Opción no válida. Por favor, selecciona una opción válida.\n")
 
-    elif opcion == "1":
-        add_to_list()
+        elif opcion == "1":
+            add_to_list(lista)
                 
 
-    elif opcion == "2":
-        view_list()
+        elif opcion == "2":
+            view_list(lista)
                 
 
-    elif opcion == "3":
-        remove_from_list()
+        elif opcion == "3":
+            remove_from_list(lista)
 
-    elif opcion == "4":
-        srted_list()
+        elif opcion == "4":
+            sorted_list(lista)
 
-    elif opcion == "5":
-        print("Adios!!")
-        break
+        elif opcion == "5":
+            print("Adios!!")
+            break
 
-    else:
-        print("Opcion invalida")
+        else:
+            print("Opcion invalida")
+
+if __name__ == "__main__":
+
+    main()
